@@ -2,8 +2,7 @@
 library(Hmsc)
 library(bayesplot)
 library(corrplot)
-library(abind)
-library(kableExtra) ## pretty tables
+library(coda)
 ##############################################################################################################
 
 ################################
@@ -100,7 +99,7 @@ rownames(gd.dat.pa.uci) <- spNames.pa
 postBeta.ab = getPostEstimate(models[[1]], parName="Beta")
 postBeta.pa = getPostEstimate(models[[2]], parName="Beta")
 
-source("~/Hmsc_plotBetaSimple.R")
+source("https://raw.githubusercontent.com/Southern-Ocean-Biodiversity-Mapping/Public_Code/refs/heads/main/Hmsc_plotBetaSimple.R")
 ## response directions
 plotBetaSimple(models[[1]], post=postBeta.ab, mar=c(8, 30, 2, 1), param="Support", spSort="reverse", main="Response direction")
 plotBetaSimple(models[[2]], post=postBeta.pa, mar=c(8, 30, 2, 1), param="Support", spSort="reverse", main="Response direction")

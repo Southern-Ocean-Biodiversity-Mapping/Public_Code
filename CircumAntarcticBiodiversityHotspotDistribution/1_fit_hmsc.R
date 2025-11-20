@@ -1,6 +1,5 @@
 ##############################################################################################################
 library(Hmsc)
-library(terra)
 ##############################################################################################################
 
 ################################
@@ -8,8 +7,8 @@ library(terra)
 ################################
 
 #### load data
-dat.bio <-    read.csv("https://raw.githubusercontent.com/Southern-Ocean-Biodiversity-Mapping/Public_Code/refs/heads/main/modelling/data_biodiversity_cells_2km.csv")
-dat.scaled <- read.csv("https://raw.githubusercontent.com/Southern-Ocean-Biodiversity-Mapping/Public_Code/refs/heads/main/modelling/data_environmental_scaled_cells_2km.csv")
+dat.bio <-    read.csv("https://raw.githubusercontent.com/Southern-Ocean-Biodiversity-Mapping/Public_Code/refs/heads/main/CircumAntarcticBiodiversityHotspotDistribution/data_biodiversity_cells_2km.csv")
+dat.scaled <- read.csv("https://raw.githubusercontent.com/Southern-Ocean-Biodiversity-Mapping/Public_Code/refs/heads/main/CircumAntarcticBiodiversityHotspotDistribution/data_environmental_scaled_cells_2km.csv")
 
 #### check and remove data-points for which environmental data is incomplete:
 waom.na.sel <- which(is.na(dat.scaled$seafloorcurrents_mean))
